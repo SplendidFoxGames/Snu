@@ -1,7 +1,7 @@
 class_name Snu
 extends CharacterBody2D
 
-
+ 
 @export var speed := 200
 
 @onready var sprite : Sprite2D = $Sprite2D
