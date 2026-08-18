@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://jusu8y3ox7d0"]
+
+[ext_resource type="PackedScene" uid="uid://cvj0mmunev34o" path="res://scenes/snu.tscn" id="1_nnsk1"]
+[ext_resource type="Texture2D" uid="uid://dbyr22kbrajta" path="res://art/environment/Test Background/City_Mockup_Square.png" id="1_rwgxs"]
+
+[node name="world" type="Node2D" unique_id=2139343830]
+
+[node name="Backgrounds" type="Node2D" parent="." unique_id=1316389762]
+position = Vector2(207, 257)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds" unique_id=338222884]
+texture = ExtResource("1_rwgxs")
+
+[node name="snu" parent="." unique_id=1539281555 instance=ExtResource("1_nnsk1")]
+position = Vector2(146, 319)
+speed = 200
