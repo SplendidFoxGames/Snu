@@ -3,18 +3,28 @@
 [ext_resource type="PackedScene" uid="uid://cvj0mmunev34o" path="res://scenes/snu.tscn" id="1_nnsk1"]
 [ext_resource type="Texture2D" uid="uid://dbyr22kbrajta" path="res://art/environment/Test Background/City_Mockup_Square.png" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://ixrlvqk3y4a5" path="res://scenes/brick_wall.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://c77m5g4agbc1t" path="res://scenes/bin.tscn" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://cxm33pdi40rth" path="res://scenes/floor.tscn" id="5_71j4m"]
 
 [node name="world" type="Node2D" unique_id=2139343830]
 
 [node name="Backgrounds" type="Node2D" parent="." unique_id=1316389762]
+visible = false
 position = Vector2(207, 257)
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds" unique_id=338222884]
 texture = ExtResource("1_rwgxs")
 
-[node name="snu" parent="." unique_id=1539281555 instance=ExtResource("1_nnsk1")]
-position = Vector2(146, 319)
-speed = 200
-
 [node name="BrickWall" parent="." unique_id=2116103199 instance=ExtResource("3_4wyf3")]
 position = Vector2(104, 330)
+
+[node name="Bin" parent="." unique_id=1031653867 instance=ExtResource("4_k0juu")]
+position = Vector2(195, 330)
+
+[node name="Floor" parent="." unique_id=974572477 instance=ExtResource("5_71j4m")]
+position = Vector2(95, 338)
+scale = Vector2(3, 1)
+
+[node name="snu" parent="Floor" unique_id=1539281555 instance=ExtResource("1_nnsk1")]
+position = Vector2(17, -8)
+scale = Vector2(0.33333334, 1)

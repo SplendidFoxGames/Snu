@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c77m5g4agbc1t"]
+
+[ext_resource type="Texture2D" uid="uid://dfrv53mqajxgx" path="res://art/environment/bin.png" id="1_yq3hu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4h021"]
+size = Vector2(32, 1)
+
+[node name="Bin" type="Node2D" unique_id=202640295]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1513578291]
+position = Vector2(0, -16)
+texture = ExtResource("1_yq3hu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=799704395]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=426956413]
+position = Vector2(0, -28)
+shape = SubResource("RectangleShape2D_4h021")
+one_way_collision = true

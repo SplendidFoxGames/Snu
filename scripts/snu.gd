@@ -3,6 +3,8 @@ extends CharacterBody2D
 
  
 @export var speed := 200
+@export var jump_velocity := -350.0
+@export var gravity := 1000.0
 
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var animationPlayer : AnimationPlayer = $AnimationPlayer
@@ -11,14 +13,22 @@ extends CharacterBody2D
 func _ready():
 	pass
 
+func _physics_process(delta):
+
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = jump_velocity
+	move_and_slide()
+
+
 func _process(_delta):
 	var direction= Input.get_axis("move_left", "move_right")
 	velocity.x = direction * speed
 
 	flip_direction()
 	set_animation()
-
-	move_and_slide()
 
 
 func flip_direction():
@@ -28,7 +38,10 @@ func flip_direction():
 		sprite.scale.x = 1
 
 func set_animation():
-	if velocity.x == 0:
+
+	if not is_on_floor():
+		animationPlayer.play("jump")
+	elif velocity.x == 0:
 		animationPlayer.play("idle")
 	else:
 		animationPlayer.play("walk")
