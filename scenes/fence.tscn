@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cjyupyqgx0gj2"]
+
+[ext_resource type="Texture2D" uid="uid://ylasehqawmgn" path="res://art/environment/fence.png" id="1_hsy3x"]
+
+[node name="Fence" type="Sprite2D" unique_id=1914724483]
+position = Vector2(0, -16)
+texture = ExtResource("1_hsy3x")

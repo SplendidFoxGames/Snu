@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://ixrlvqk3y4a5" path="res://scenes/brick_wall.tscn" id="3_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://c77m5g4agbc1t" path="res://scenes/bin.tscn" id="4_k0juu"]
 [ext_resource type="PackedScene" uid="uid://cxm33pdi40rth" path="res://scenes/floor.tscn" id="5_71j4m"]
+[ext_resource type="PackedScene" uid="uid://cjyupyqgx0gj2" path="res://scenes/fence.tscn" id="6_i7141"]
+[ext_resource type="PackedScene" uid="uid://ccpwc6qgdcgsv" path="res://scenes/hole.tscn" id="7_4mrxx"]
 
 [node name="world" type="Node2D" unique_id=2139343830]
 
@@ -23,8 +25,15 @@ position = Vector2(195, 330)
 
 [node name="Floor" parent="." unique_id=974572477 instance=ExtResource("5_71j4m")]
 position = Vector2(95, 338)
-scale = Vector2(3, 1)
+scale = Vector2(7, 1)
 
-[node name="snu" parent="Floor" unique_id=1539281555 instance=ExtResource("1_nnsk1")]
-position = Vector2(17, -8)
-scale = Vector2(0.33333334, 1)
+[node name="Fence" parent="." unique_id=1914724483 instance=ExtResource("6_i7141")]
+position = Vector2(319.00003, 281)
+scale = Vector2(6.2800026, 3.0301595)
+
+[node name="Hole" parent="." unique_id=826087217 instance=ExtResource("7_4mrxx")]
+position = Vector2(315, 327)
+next_level = "uid://def3v0khpljng"
+
+[node name="snu" parent="." unique_id=1539281555 instance=ExtResource("1_nnsk1")]
+position = Vector2(146, 330)
