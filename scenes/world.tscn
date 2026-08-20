@@ -20,20 +20,21 @@ texture = ExtResource("1_rwgxs")
 [node name="BrickWall" parent="." unique_id=2116103199 instance=ExtResource("3_4wyf3")]
 position = Vector2(104, 330)
 
+[node name="snu" parent="." unique_id=1539281555 instance=ExtResource("1_nnsk1")]
+position = Vector2(146, 330)
+
+[node name="Fence" parent="." unique_id=1914724483 instance=ExtResource("6_i7141")]
+z_index = 5
+position = Vector2(319.00003, 281)
+scale = Vector2(6.2800026, 3.0301595)
+
 [node name="Bin" parent="." unique_id=1031653867 instance=ExtResource("4_k0juu")]
-position = Vector2(195, 330)
+position = Vector2(227, 329)
 
 [node name="Floor" parent="." unique_id=974572477 instance=ExtResource("5_71j4m")]
 position = Vector2(95, 338)
 scale = Vector2(7, 1)
 
-[node name="Fence" parent="." unique_id=1914724483 instance=ExtResource("6_i7141")]
-position = Vector2(319.00003, 281)
-scale = Vector2(6.2800026, 3.0301595)
-
 [node name="Hole" parent="." unique_id=826087217 instance=ExtResource("7_4mrxx")]
 position = Vector2(315, 327)
 next_level = "uid://def3v0khpljng"
-
-[node name="snu" parent="." unique_id=1539281555 instance=ExtResource("1_nnsk1")]
-position = Vector2(146, 330)

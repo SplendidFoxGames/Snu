@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://5kid3f0ovcwd"]
+
+[ext_resource type="PackedScene" uid="uid://cvj0mmunev34o" path="res://scenes/snu.tscn" id="1_014kd"]
+[ext_resource type="PackedScene" uid="uid://cxm33pdi40rth" path="res://scenes/floor.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://cjyupyqgx0gj2" path="res://scenes/fence.tscn" id="3_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://ixrlvqk3y4a5" path="res://scenes/brick_wall.tscn" id="3_rus8k"]
+[ext_resource type="PackedScene" uid="uid://ccpwc6qgdcgsv" path="res://scenes/hole.tscn" id="5_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://c77m5g4agbc1t" path="res://scenes/bin.tscn" id="6_pa8r4"]
+
+[node name="level1" type="Node2D" unique_id=1813905880]
+
+[node name="Fence" parent="." unique_id=1914724483 instance=ExtResource("3_5xbjy")]
+position = Vector2(165.00002, 277)
+rotation = -3.1415925
+scale = Vector2(7.711517, 5.110715)
+
+[node name="snu" parent="." unique_id=1539281555 instance=ExtResource("1_014kd")]
+position = Vector2(76, 334)
+
+[node name="Floor" parent="." unique_id=974572477 instance=ExtResource("2_bswci")]
+position = Vector2(45, 348)
+scale = Vector2(3.712103, 1.2632666)
+
+[node name="BrickWall" parent="." unique_id=2116103199 instance=ExtResource("3_rus8k")]
+position = Vector2(38, 357)
+scale = Vector2(1, 2.52)
+
+[node name="BrickWall2" parent="." unique_id=1042663280 instance=ExtResource("3_rus8k")]
+position = Vector2(292, 357)
+scale = Vector2(1, 2.52)
+
+[node name="Hole" parent="." unique_id=826087217 instance=ExtResource("5_fcfvj")]
+position = Vector2(272, 304)
+next_level = "uid://jusu8y3ox7d0"
+
+[node name="Bin" parent="." unique_id=202640295 instance=ExtResource("6_pa8r4")]
+position = Vector2(268, 337)
